@@ -8,8 +8,10 @@ public static class DependencyInjection
 {
     public static IServiceCollection AddDataAccess(this IServiceCollection services, IConfiguration configuration)
     {
-        services.AddDbContext<SchoolDbContext>(options => options.UseSqlite(configuration.GetConnectionString("SchoolDb")));
+        services.AddDbContext<SchoolDbContext>(options => options.UseSqlServer(configuration.GetConnectionString("SchoolDb")));
         services.AddScoped<IStudentRepository, StudentRepository>();
+        services.AddScoped<IDepartmentRepository, DepartmentRepository>();
+        services.AddScoped<ICourseRepository, CourseRepository>();
         return services;
     }
 }
