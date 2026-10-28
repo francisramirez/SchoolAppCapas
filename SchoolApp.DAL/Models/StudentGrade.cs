@@ -1,8 +1,10 @@
 ﻿#nullable disable
 
+using SchoolApp.DAL.Models.Base;
+
 namespace SchoolApp.DAL.Models;
 
-public partial class StudentGrade
+public partial class StudentGrade : AuditEntity
 {
     public int EnrollmentId { get; set; }
 

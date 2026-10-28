@@ -1,8 +1,10 @@
 ﻿#nullable disable
 
+using SchoolApp.DAL.Models.Base;
+
 namespace SchoolApp.DAL.Models;
 
-public partial class EnrollmentStatus
+public partial class EnrollmentStatus : AuditEntity
 {
     public int EnrollmentStatusId { get; set; }
 
@@ -14,11 +16,4 @@ public partial class EnrollmentStatus
 
     public bool IsActive { get; set; }
 
-    public DateTime CreationDate { get; set; }
-
-    public int CreationUser { get; set; }
-
-    public DateTime? ModifyDate { get; set; }
-
-    public int? UserMod { get; set; }
 }

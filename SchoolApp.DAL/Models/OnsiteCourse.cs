@@ -1,8 +1,10 @@
 ﻿#nullable disable
 
+using SchoolApp.DAL.Models.Base;
+
 namespace SchoolApp.DAL.Models;
 
-public partial class OnsiteCourse
+public partial class OnsiteCourse : AuditEntity
 {
     public int CourseId { get; set; }
 
